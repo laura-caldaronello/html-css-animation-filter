@@ -134,3 +134,91 @@
 }
 
 /* ESERCIZIO 6 */
+
+.ex-6-img:hover {
+  filter: grayscale(100%);
+  transition: filter 0s; /* si poteva anche omettere */
+}
+/* non c'è bisogno del not:hover a causa dell'immediatezza della cosa, così come non c'era bisogno del transition */
+
+/* ESERCIZIO 7 */
+
+.ex-7-img:hover {
+  filter: sepia(100%) grayscale(50%);
+  transition: filter 3s;
+}
+.ex-7-img:not(:hover) {
+  filter: none;
+  transition: filter 3s;
+}
+
+/* ESERCIZIO 8 */
+
+.ex-8-img:hover {
+  border-radius: 20px;
+  filter: grayscale(50%) sepia(50%);
+  transition: filter 2s, border-radius 2s;
+}
+.ex-8-img:hover {
+  border-radius: 0;
+  filter: none;
+  transition: filter 2s, border-radius 2s;
+}
+
+/* ESERCIZIO 9 DA RIVEDERE */
+
+.ex-9-img:hover {
+  border-radius: 20px;
+  filter: grayscale(50%) sepia(50%);
+  margin: -6px 0; /* l'ho dovuta indovinare a occhio */
+  width: 600px;
+  transition: filter 2s, border-radius 2s, margin 2s, width 2s;
+}
+/* .ex-9-img:hover {
+  border-radius: 0;
+  filter: none;
+  transition: filter 2s, border-radius 2s;
+} */
+
+/* ESERCIZIO 10 */
+
+.ex-10-icon {
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+  100% {transform: rotate(-360deg);}
+}
+
+/* ESERCIZIO 11 */
+
+.ex-11-icon:hover {
+  animation-name: spin2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+@keyframes spin2 {
+  75% {transform: rotate(270deg);}
+  100% {transform: rotate(0deg);}
+}
+
+/* ESERCIZIO 12 */
+
+.ex-12-button:hover [class^="ex-12-"] {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+.ex-12-button:hover .ex-12-top-white {
+  animation-name: borderchange1;
+}
+@keyframes borderchange1 {
+  50% {left: calc(100% - 60px);}
+}
+.ex-12-button:hover .ex-12-bottom-white {
+  animation-name: borderchange2;
+}
+@keyframes borderchange2 {
+  50% {right: calc(100% - 60px);}
+}
