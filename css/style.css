@@ -115,22 +115,16 @@
 /* ESERCIZIO 5 */
 
 .ex-5-square:hover {
-  height: 120px;
-  width: 120px;
-  margin: -10px;
-  transition: height 1s, width 1s, margin 1s;
+  transform: scale(2);
+  transition: transform 1s;
 }
 .ex-5-square:active {
-  height: 30px;
-  width: 30px;
-  margin: 35px;
-  transition: height 1s, width 1s, margin 1s;
+  transform: scale(0.5);
+  transition: transform 1s;
 }
 .ex-5-square:not(:hover):not(:active) {
-  height: 60px;
-  width: 60px;
-  margin: 20px;
-  transition: height 1s, width 1s, margin 1s;
+  transform: scale(1);
+  transition: transform 1s;
 }
 
 /* ESERCIZIO 6 */
@@ -165,20 +159,20 @@
   transition: filter 2s, border-radius 2s;
 }
 
-/* ESERCIZIO 9 DA RIVEDERE */
+/* ESERCIZIO 9 */
 
 .ex-9-img:hover {
   border-radius: 20px;
   filter: grayscale(50%) sepia(50%);
-  margin: -6px 0; /* l'ho dovuta indovinare a occhio */
-  width: 600px;
-  transition: filter 2s, border-radius 2s, margin 2s, width 2s;
+  transform: scale(1.5);
+  transition: filter 2s, border-radius 2s, transform 2s;
 }
-/* .ex-9-img:hover {
+.ex-9-img:not(:hover) {
   border-radius: 0;
   filter: none;
-  transition: filter 2s, border-radius 2s;
-} */
+  transform: scale(1);
+  transition: filter 2s, border-radius 2s, transform 2s;
+}
 
 /* ESERCIZIO 10 */
 
